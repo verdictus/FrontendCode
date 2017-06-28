@@ -1,0 +1,37 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <title>Operatii</title>
+    <script type="text/javascript">
+        function Operatii($scope) {
+            $scope.total = function () {
+                return parseInt($scope.x) + parseInt($scope.y);
+            };
+            $scope.total2 = function () {
+                return parseInt($scope.x) * parseInt($scope.y);
+            };
+            $scope.total3 = function () {
+                return parseInt($scope.x) / parseInt($scope.y);
+            };
+            $scope.total4 = function () {
+                return parseInt($scope.x) - parseInt($scope.y);
+            };
+        }
+    </script>
+</head>
+<body>
+<div ng-app>
+    <div ng-controller="Operatii">
+        <div>
+            <li>Number 1: <input type="text" ng-model="x" /> </li>
+            <li>Number 2: <input type="text" ng-model="y" /> </li>
+            <li>Total <input type="text" value="{{total()}}"/></li>
+            <li>Inmultire <input type="text" value="{{total2()}}"/></li>
+            <li>Impartire <input type="text" value="{{total3()}}"/></li>
+            <li>Scadere <input type="text" value="{{total4()}}"/></li>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
